@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h2>Demo the fee extention</h2>
+    <div class="result">
+	</div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"><!-- --></script>
+	<script>
+	  $.ajax({
+	    url:'/v1/resources/fee',
+		type: 'post',
+		data: {
+		  'rs:quest': 'I seek the holy grail',
+		  'rs:favorite-color': 'red'
+		},
+		success: function (data) {
+		  $(".result").html(data);
+		}
+	  });
+	</script>
+   </body>
+</html>   

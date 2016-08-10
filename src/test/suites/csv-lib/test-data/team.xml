@@ -1,0 +1,11 @@
+<team>
+  <place src="1"/>
+  <name src="2"/>
+  <stadium>
+	<name src="3"/>
+	<street src="4"/>
+	<city src="5"/>
+	<state src="6"/>
+	<zip src="7"/>
+  </stadium>
+</team>
