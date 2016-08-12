@@ -5,8 +5,6 @@ module namespace ds = "http://marklogic.com/rest-api/resource/train";
 declare namespace roxy = "http://marklogic.com/roxy";
 declare namespace rapi = "http://marklogic.com/rest-api";
 
-import module namespace dstrain = "http://marklogic.com/rest-api/resource/train" at "";
-
 (:
  : To add parameters to the functions, specify them in the params annotations.
  : Example
@@ -30,11 +28,12 @@ function ds:get(
   $context as map:map,
   $params  as map:map
 ) as document-node()*
-(: move this into a library module 
 {
+   ds:post($context, $params, ())
+(:
   map:put($context, "output-types", "application/xml"),
   map:put($context, "output-status", (200, "OK")),
-  document { <root>GET called on the ext service extension</root> } 
+  document { "GET called on the ext service extension" }
 :)
 };
 
